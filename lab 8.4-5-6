@@ -1,0 +1,40 @@
+#Author: Mason Andrews
+
+def count_a(word):
+    count = 0
+    for char in word:
+        if char == 'a' or char == 'A':
+            count += 1
+    return count
+
+input_word = "Abracadabra"
+result = count_a(input_word)
+print(f"The number of 'a's in '{input_word}' is:", result)
+
+# lab_8-5.py
+
+def factorial(num):
+    if num < 0:
+        return "Invalid input. Factorial is not defined for negative numbers."
+    elif num == 0 or num == 1:
+        return 1
+    else:
+        result = 1
+        for i in range(1, num + 1):
+            result *= i
+        return result
+
+input_num = 5
+result = factorial(input_num)
+print(f"The factorial of {input_num} is:", result)
+
+# lab_8-6.py
+
+def is_palindrome(word):
+    word_lower = word.lower()
+    
+    return word_lower == word_lower[::-1]
+
+input_word = "level"
+result = is_palindrome(input_word)
+print(f"Is '{input_word}' a palindrome? {result}")
